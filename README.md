@@ -7,63 +7,109 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+### Requerimientos
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+* PHP >= 5.6.4
+* OpenSSL PHP Extension
+* PDO PHP Extension
+* Mbstring PHP Extension
+* Tokenizer PHP Extension
+* XML PHP Extension
+* MySQL >= 5.7.*
+* <a href="https://getcomposer.org/">Composer</a>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Instalación
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+El proyecto esta desarrollado en [Laravel 5.4](https://laravel.com/docs/5.4/)
 
-## Learning Laravel
+```sh
+"Los puntos con simbolo ($) son comandos desde consola
+ ubicado en la ruta del proyecto (C:\xampp\htdocs\Siaaf)"
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+1- Clonar proyecto desde GitKraken
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+2- Inicializar GifFlow y hacer Pull con la rama develop
+   (rama la cual se trabajara en el proyecto)
 
-## Laravel Sponsors
+3. $ composer install  
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+4- Copiar el archivo .env.example
+   (.env - copia.example) y cambiar el nombre a .env
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
+5- Dejar la configuracion DB de developer
+   y del modulo asignado (Eliminar los demas modulos) ejemplo
 
-## Contributing
+   DB_HOST_DEVELOPER=127.0.0.1
+   DB_DATABASE_DEVELOPER=developer
+   DB_USERNAME_DEVELOPER=Miguel
+   DB_PASSWORD_DEVELOPER=123456
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   DB_HOST_SPORTCIT=127.0.0.1
+   DB_DATABASE_SPORTCIT=sportcit
+   DB_USERNAME_SPORTCIT=Miguel
+   DB_PASSWORD_SPORTCIT=123456
 
-## Security Vulnerabilities
+5- Crear dos bases de datos con el respectivo nombre asignado en .env
+   y configurar el archivo .env ejemplo
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   DB developer
+   DB sportcit
 
-## License
+6- $ php artisan key:generate
+7- $ php artisan storage:link
+8- Migrar las bases de datos de developer y el modulo asignado ejemplo
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    $ php artisan migrate --path=/database/migrations/developer --database=developer
+    $ php artisan migrate --path=/database/migrations/sportcit --database=sportcit
+
+9- $ php artisan db:seed --class=DatabaseDeveloperSeeder
+
+```
+
+### Actualización Laravel 5.5
+
+```sh
+1- composer update
+2- php artisan package:discover
+```
+
+### Instalacion Node
+
+Activación de notificaciones de tiempo real (No es obligatorio)
+
+```sh
+1- Instalar Redis-x64-3.2.100.msi (Material de apoyo / Redis Windows)
+2- Instalar Node.js V8.4.0 (Material de apoyo / Node.js)
+3- $ npm install
+3- Verificar cambios en el archivo .env.example
+4- Inicializar el servidor de node
+
+5- Ejecutar los Queues
+    $ php artisan queue:work
+```
+
+### Herramientas
+
+* <a href="https://github.com/siaaf-udec/dashboard-template">Plantilla Base Metronic Material Theme</a>
+* <a href="https://education.github.com/pack">GitHub Student Pack</a>
+* <a href="https://www.gitkraken.com/">GitKraken</a>
+* <a href="https://siaaf-cit.slack.com/">Canal de Comunicación de Notificaciones</a>
+* <a href="http://codeship.com/">Codeship, pruebas de integración contínua</a>
+
+
+### Material de Apoyo
+
+* <a href="https://styde.net/">Styde</a>
+* <a href="https://www.youtube.com/channel/UC07xim4Gg8kOk3uZwMrGNeQ/playlists">YouTube - Raul Palacios</a>
+* <a href="https://laravel.com/docs/5.4">Documentación Laravel 5.4</a>
+* <a href="https://mailtrap.io/">Pruebas de Email</a>
+* <a href="https://wkhtmltopdf.org/downloads.html">Binarios Snappy</a>
+* <a href="https://github.com/MicrosoftArchive/redis/releases">Redis Windows</a>
+* <a href="https://nodejs.org/en/">Node.js</a>
+
+### Documentos
+* <a href="http://es.presidencia.gov.co/dapre/DocumentosSIGEPRE/L-TI-12-denominacion-bases_de_datos.pdf">Denominacion Base de Datos</a>
+* <a href="https://prezi.com/e9map5v-izuu/diagrama-de-caso-de-uso-y-diagrama-de-actividades/">Diagramas</a>
+* <a href="https://msdn.microsoft.com/es-es/library/bb972214.aspx">Guia UML</a>
+* <a href="http://www-2.dc.uba.ar/materias/isoft1/Apuntes/DiagramasDeActividad.pdf">Diagramas de Actividad</a>
+* <a href="http://www.cyta.com.ar/ta0604/v6n4a1.htm">Procesos del Negocio a los Casos de Uso</a>
