@@ -18,7 +18,7 @@
 * MySQL >= 5.7.*
 * <a href="https://getcomposer.org/">Composer</a>
 
-### Instalación 2019
+### Instalación 2019 por actualizar
 
 El proyecto esta desarrollado en [Laravel 5.7](https://laravel.com/docs/5.7/)
 
