@@ -20,7 +20,7 @@
 
 ### Instalación
 
-El proyecto esta desarrollado en [Laravel 5.7](https://laravel.com/docs/5.4/)
+El proyecto esta desarrollado en [Laravel 5.7](https://laravel.com/docs/5.7/)
 
 ```sh
 "Los puntos con simbolo ($) son comandos desde consola
@@ -31,7 +31,7 @@ El proyecto esta desarrollado en [Laravel 5.7](https://laravel.com/docs/5.4/)
 2- Inicializar GifFlow y hacer Pull con la rama develop
    (rama la cual se trabajara en el proyecto)
 
-3. $ composer install  
+3. $ composer install
 
 4- Copiar el archivo .env.example
    (.env - copia.example) y cambiar el nombre a .env
