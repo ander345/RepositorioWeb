@@ -20,7 +20,7 @@
 
 ### Instalación
 
-El proyecto esta desarrollado en [Laravel 5.4](https://laravel.com/docs/5.4/)
+El proyecto esta desarrollado en [Laravel 5.7](https://laravel.com/docs/5.4/)
 
 ```sh
 "Los puntos con simbolo ($) son comandos desde consola
